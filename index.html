@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="d-flex justify-content h100 text-center align-item">
+    <div class="card text-center">
+    <p class="text-center pt-100 p1">0</p>
+    <button class="btn">ADD ONE</button>
+   
+    </div>
+</div>
+    <script>
+        let p = document.querySelector("p")
+        let button = document.querySelector("button")
+
+
+        button.addEventListener("click", function () {
+            p.innerHTML = +p.innerHTML + 1;
+        })
+
+    </script>
+</body>
+
+</html>
