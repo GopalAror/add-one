@@ -1,5 +1,5 @@
 .card{
-    width: 300px;
+  
     height: 300px;
     border-radius: 8px;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
@@ -13,6 +13,9 @@
 }
 .justify-content{
     justify-content: center;
+}
+.align-items-end{
+    align-items: end;
 }
 .pt-100{
     padding-top: 100px;
@@ -35,6 +38,7 @@ height: 70px;
 border-radius: 150px;
 background: #FFF;
 border: none;
+cursor: pointer;
 }
 .p1{
     color: #2C49FE;
@@ -43,4 +47,25 @@ border: none;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+.disable{
+    background: gray;
+    pointer-events: none
+}
+.flex-d-c{
+  flex-direction: column;
+}
+.gap-50{
+    gap: 50px;
+}
+.relative{
+    position: relative;
+}
+.pos-ab{
+    position: absolute;
+right: 45%;
+}
+.pos-abs{
+    position: absolute;
+right: 80%;
 }

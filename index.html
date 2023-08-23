@@ -4,25 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>counter</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <div class="d-flex justify-content h100 text-center align-item">
-    <div class="card text-center">
-    <p class="text-center pt-100 p1">0</p>
-    <button class="btn">ADD ONE</button>
-   
+        <div class="card  relative text-center d-flex gap-50">
+            <div class=" d-flex gap-50 ">
+            <p class="text-center pt-100 p1 pos-abs p">0</p>
+            <p class="text-center pt-100 p1  pos-ab" id="counting">0</p>
+            </div>
+            <div class=" d-flex gap-50 align-items-end">
+            <button class="btn">ADD ONE</button>
+            <button id="save" class="btn">save</button>
+        </div>
+        <button id="reset" class="btn">reset</button>
+
+        </div>
     </div>
-</div>
     <script>
-        let p = document.querySelector("p")
+        let p = document.querySelector(".p")
         let button = document.querySelector("button")
+        let save = document.querySelector("#save")
+        let saveno = document.querySelector("#counting")
+        let reset = document.querySelector("#reset")
 
 
         button.addEventListener("click", function () {
             p.innerHTML = +p.innerHTML + 1;
+            save.classList.remove("disable")
+        })
+        reset.addEventListener("click", function () {
+            p.innerHTML = 0
+            saveno.innerHTML = 0
+        })
+        save.addEventListener("click", function () {
+            if (p.innerHTML == 0) {
+                save.classList.add("disable")
+            }
+            else if (p.innerHTML != 0) {
+                if (saveno.innerHTML == 0) {
+                    saveno.innerHTML = p.innerHTML
+                }
+
+                else if (saveno.innerHTML != 0) {
+                    saveno.innerHTML += "," + p.innerHTML
+                }
+            }
+            p.innerHTML = 0
         })
 
     </script>
